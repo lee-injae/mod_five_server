@@ -52,7 +52,7 @@ ActiveRecord::Schema.define(version: 2020_07_20_163742) do
     t.string "image"
     t.text "description"
     t.integer "user_id"
-    t.boolean "status"
+    t.boolean "sold"
     t.integer "buyer_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

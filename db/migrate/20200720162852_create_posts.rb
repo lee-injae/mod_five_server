@@ -7,7 +7,7 @@ class CreatePosts < ActiveRecord::Migration[6.0]
       t.string :image
       t.text :description
       t.integer :user_id
-      t.boolean :status
+      t.boolean :sold
       t.integer :buyer_id
 
       t.timestamps
