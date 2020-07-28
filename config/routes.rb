@@ -9,7 +9,9 @@ Rails.application.routes.draw do
     end
     
   end
-  get '/posts', to: "post#index"
   get '/locations', to: "location#create"
+  get '/posts', to: "post#index"
+  post '/post', to: "post#create"
+  
 
 end
