@@ -24,7 +24,6 @@ class PostController < ApplicationController
 
     def create
         @post = Post.new(post_params)
-       
         if @post.save 
             render json: @post, status: :created
         else
@@ -44,7 +43,7 @@ class PostController < ApplicationController
 
     private
     def post_params
-        params.require(:post).permit(:title, :price, :date, :description, :image, :sold, :user_id)
+        params.require(:post).permit(:title, :price, :date, :description, :image, :sold, :user_id, :buyer_id)
     end
 
 end
