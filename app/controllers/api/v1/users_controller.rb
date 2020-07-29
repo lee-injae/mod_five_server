@@ -8,8 +8,6 @@ class Api::V1::UsersController < ApplicationController
 
     def create
         @user = User.create(email:params[:email], password:params[:password], nickname:params[:nickname], location_id:params[:location_id])   
-                # byebug
-
         if @user.valid?
             @token = encode_token(user_id: @user.id)       
             render json: { user: @user, jwt: @token }
